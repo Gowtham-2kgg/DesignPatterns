@@ -8,7 +8,7 @@ namespace DesignPatterns.Additional_Patterns
         //object that creates another object or creates many prototypes
         //though its not in patterns but both factory as well as abstract factory both can be said as
         //this simple factory
-        public void client()
+        public void Client()
         { 
             Creator Creator = new Creator();
             var animal = Creator.GetAnimal(); 
