@@ -51,7 +51,7 @@ namespace DesignPatterns.Factory
         }
     }
 
-    public abstract class AnimalFactory
+    public abstract class AnimalFactory//can be modified by sending string of animal name and creating object using switch
     {
         public abstract IAnimals GetAnimal();
     }
