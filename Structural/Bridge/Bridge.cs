@@ -51,4 +51,46 @@ namespace DesignPatterns.Structural.Bridge
         }
     }
 
+    public interface IDetails
+    {
+        public string Name {
+        get;
+        set;
+    }
+
+    void Discount();
+        void Price();
+    }
+
+    public class Sofa : IDetails
+    {
+        public string Name { get; set; }
+
+        public void Discount()
+        {
+            Console.WriteLine($"{Name} is 1000 off");
+        }
+
+        public void Price()
+        {
+            Console.WriteLine($"{Name} is 100000 ");
+        }
+    }
+
+    public class Furniture
+    {
+        public IDetails Details;
+
+        public Furniture(IDetails details)
+        {
+            this.Details = details;
+        }
+
+        public void Attributes()
+        {
+            Details.Discount();
+            Details.Price();
+        }
+    }
+
 }
